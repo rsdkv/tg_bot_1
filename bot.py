@@ -3,11 +3,13 @@ from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 from aiogram.dispatcher.filters import Text
 
+import random
 from config import TOKEN
-
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
+
+
 # @test6767test_bot
 
 # старт
@@ -25,13 +27,17 @@ async def process_start_command(message: types.Message):
     await message.answer("Что вам интересно?", reply_markup=keyboard)
 
 
-@dp.message(Text(text="Книги"))
+@dp.message_handler(text="Книги")
 async def with_puree(message: types.Message):
-    await message.reply("Отличный выбор!")
+    with open("books.txt") as books:
+        lines = random.sample(list(books), 10)
+        await message.reply(*map(str.strip, lines))
 
-@dp.message(lambda message: message.text == "Без пюрешки")
+
+@dp.message_handler(lambda message: message.text == "Без пюрешки")
 async def without_puree(message: types.Message):
     await message.reply("Так невкусно!")
+
 
 # echo - заглушка
 
