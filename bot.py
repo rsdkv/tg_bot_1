@@ -29,14 +29,14 @@ async def process_start_command(message: types.Message):
 
 @dp.message_handler(text="Книги")
 async def with_puree(message: types.Message):
-    with open("books.txt") as books:
+    with open("books.txt", "r") as books:
         lines = random.sample(list(books), 10)
         await message.reply(*map(str.strip, lines))
 
 
-@dp.message_handler(lambda message: message.text == "Без пюрешки")
+@dp.message_handler(lambda message: message.text == "1-->111")
 async def without_puree(message: types.Message):
-    await message.reply("Так невкусно!")
+    await message.reply("111!")
 
 
 # echo - заглушка
