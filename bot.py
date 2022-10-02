@@ -10,7 +10,7 @@ import markup as nav
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
-# @test6767test_bot
+
 
 # обработчик списка фильмов
 with open('text_films.txt', encoding='utf8') as f:
