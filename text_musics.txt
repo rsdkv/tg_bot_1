@@ -1,5 +1,4 @@
-список музыки
-1 ссылка на музыку
-2 ссылка на музыку
-3 ссылка на музыку
-4 ссылка на музыку
+1. https://music.yandex.ru/album/23533128
+2. https://music.yandex.ru/album/23533670
+3. https://music.yandex.ru/album/23482393
+4. https://music.yandex.ru/album/23529901

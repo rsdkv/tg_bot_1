@@ -69,7 +69,7 @@ async def with_puree(message: types.Message):
         await bot.send_message(message.from_user.id, 'Главное меню', reply_markup=nav.mainMenu)
     elif message.text == 'Учиться':
         await bot.send_message(message.from_user.id,
-                               'Здесь вы можете найти всё, что вам может понадобиться для обучения: \n' + edu_text,
+                               'Здесь вы можете найти всё, что вам может понадобиться для обучения:\n' + edu_text,
                                reply_markup=nav.eduMenu)
     elif message.text == 'Стать лучше':
         await bot.send_message(message.from_user.id,
@@ -86,10 +86,10 @@ async def with_puree(message: types.Message):
         await bot.send_message(message.from_user.id, 'Список книг, которые могут изменить вышу жизнь:\n' + books_text,
                                reply_markup=nav.booksMenu)
     elif message.text == 'Музыка':
-        await bot.send_message(message.from_user.id, 'Ссылки на ресурсы для прослушивания:\n ' + music_text,
+        await bot.send_message(message.from_user.id, 'Ссылки на ресурсы для прослушивания:\n' + music_text,
                                reply_markup=nav.musicsMenu)
     elif message.text == 'Другие материалы':
-        await bot.send_message(message.from_user.id, 'Ссылки на ресурсы: \n' + links_text,
+        await bot.send_message(message.from_user.id, 'Ссылки на ресурсы:\n' + links_text,
                                reply_markup=nav.mainMenu)
     elif message.text == 'Трейдеру':
         await bot.send_message(message.from_user.id, 'Здесь есть всё, что вам может понадобиться',
